@@ -1,0 +1,378 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto+Condensed:ital,wght@1,700&family=Yanone+Kaffeesatz:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&family=EB+Garamond&family=PT+Serif:wght@700&family=Roboto+Condensed:ital,wght@1,700&family=Signika+Negative:wght@600&family=Yanone+Kaffeesatz:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&family=EB+Garamond&family=PT+Serif:wght@700&family=Roboto+Condensed:ital,wght@1,700&family=Signika+Negative:wght@600&family=Yanone+Kaffeesatz:wght@200;300;400&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+
+.navbar-brand img{
+    width: 150px;
+    height: 50px;
+}
+  .nav-item a{
+    font-size: 15px;
+    color: rgb(16, 17, 16);
+  
+} 
+/* forget password */
+.forget-password{
+    display: none;
+}
+
+.navbar{
+position: fixed;
+top: 0;
+right: 0;
+width: 100%;
+} 
+.form-group input{
+    width: 400px;
+}
+.dropdown-menu{
+
+    display: none;
+}
+.dropdown-menu .dropdown-email{
+    border-bottom: 1px solid white;
+}
+
+ /* serch city */
+ /* serach container */
+ .serach-container{
+  background-image: url("../image/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+   
+
+ }
+
+ .form-serach{
+    width: 100%;
+    height: 600px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.white{
+    text-align: center;
+    color: white;
+}
+ /* serach input  */
+ .serach-input input{
+  width: 500px;
+  background-color: aliceblue;
+  border-radius:5px 0 0 5px;
+  height:40px;
+  
+  }
+/* icon  */
+  .form-group i{
+    width:40px;
+    text-align:center;
+    padding:5px;
+    font-size:25px;
+    border:1px solid black;
+    color:#eeeee9;
+    background-color:#47638d;
+
+
+  }
+  /* error message */
+  #login_show,#signup_show{
+      display: none;
+  }
+/* serach button */
+.serach-input button{
+    font-size:20px;
+    background-color: rgb(139, 141, 143);
+    width: 50px;
+    text-align: center;
+    height:40px;
+     color: rgb(236, 239, 245);
+     border-radius:0 5px 5px 0;
+     border: 2px solid rgb(2, 8, 21);
+     margin:none;
+     
+}
+
+
+/* city container */
+.col-md-3 {
+    text-align: center;
+
+}
+
+
+.city-headling{
+    text-align: center;
+}
+
+.rounded-circle{
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgb(2, 8, 21);
+     padding:5px;
+     box-shadow:2px 2px 10px 2px rgb(44, 65, 86);
+    
+   
+}
+/* property container */
+.property-container{
+    width: 60%;
+    margin: auto;
+
+    
+}
+.breadcrumb{
+     box-shadow: 0 5px 5px 0 rgb(139, 141, 143);
+     border-radius: 5px;
+     background-color: rgb(247, 240, 231);
+
+
+}
+.breadcrumb-container{
+     display: block;
+     width: 50%;
+     margin: auto;
+}
+/* property image */
+.hotel-img{
+    display: block;
+    width:100%;
+    height: auto;
+    margin: auto;
+
+    
+}
+/* carousel image */
+.carousel-image{
+    height: 400px;
+
+}
+/* carousel button */
+
+
+/* jumbotron container */
+.jumbotron{
+    box-shadow: 2px 4px   rgb(126 127 97);
+}
+/* name-like container */
+/* dashbord page */
+.dashborad-page{
+    background-color:#dff1bc;
+
+}
+/* rating Container */
+.fa-star,.fa-star-half-o, .fa-star-o{
+    color:#f0f107;
+}
+
+
+/* uers intersted */
+
+.user-intersted i{
+    font-size: 30px;
+    color: rgb(249, 7, 7);
+   
+}
+/* hotel name */
+.hotel-name {
+
+    color: #481042;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+/* address location icon */
+.hotel-address i {
+    font-size:1.3rem;
+    color: rgb(9, 19, 152);
+    margin:0 5px 0 10px;
+    
+
+}
+.hotel-address address{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+/* hotal name and interseted */
+
+.interested-container i{
+    color: rgb(250, 15, 15);
+    font-size: 1.5rem;
+    
+}
+/* gender container */
+.female img,.male img, .unisex img{
+
+    max-width: 40px;
+    max-height: 40px;
+
+}
+/* address container */
+.address i{
+    color: #734aee;
+    font-size: 20px;
+}
+.address p{
+    font-size:15px;
+    color:rgb(10 79 5);
+     
+       
+}
+/* reupess container */
+
+.rupees-logo{
+    width: 20px;
+    height: 30px;
+}
+
+
+
+/* fillter container */
+.filter-container img{
+     width: 40px;
+    height: 40px;
+    box-shadow: 5px  rgb(231 104 235 / 50%);
+    border: 1px solid rgb(30 31 29 / 68%);
+ background-color:#f1e4e4;
+   
+}
+/* property-details */
+.property-details{
+    
+    
+    background-color:rgb(246 244 244);
+       color:#060006;
+ 
+    }
+    
+    .name-container h3{
+     color:#302681;
+        
+    }
+    .property-details .address p{
+     color:#01100b;
+    }
+    .property-details .address i{
+     color:#7937ce;
+    }
+    
+    
+    .amenities-containerr{
+        border-top: 1px solid rgb(16, 17, 16);
+        height: 300px;
+    
+        
+        text-align: center;
+      max-height:400px;
+    
+    
+    }
+    .amenity-container p{
+        font-size: 15px;
+    
+    }
+  
+    /* testimonial container */
+    /* testimonial container */
+
+    .facilities{
+        font-family: 'PT Serif', serif;
+        color: #18256f;
+     
+font-size:30px;
+ }
+ .amenities-list{
+
+    background-color: #e6db6538;
+
+
+ }
+ 
+ 
+
+    
+    .amenities-container h5{
+        color: #04072d;
+    
+    }
+  
+    .testimonial{
+       color:#e1e0dc;
+       border:1px solid #101010;
+       box-shadow:-10px 5px 20px rgb(65 75 85);
+     background-color:white;
+     
+     
+      }
+    .user-name{
+     color:#910a7e;
+     
+     font-size:20px;
+     
+    }
+    .content{
+     color:#15010b;
+     font-size:15px;
+        
+    }
+    mark{
+
+        background-color: #734aee;
+
+
+    }
+
+    /* footer page */
+    .contact-info{
+        border-bottom: 1px solid rgb(236, 239, 245);
+    }
+    .contact-info li a{
+        color:whitesmoke ;
+        text-decoration: none;
+        list-style-type: none;
+    }
+     /* login page */
+     .panel{
+        display: block;
+        width: 450px;
+        margin: auto;
+        height:fit-content;
+        background-color:#f0f6f6 ;
+        box-shadow: 2px 2px 10px #8e9ad1 ;
+       
+ 
+
+     }
+     /* eeror mesg */
+     .message{
+         color: #b40d0d;
+         border:1px solid #a50404;
+      text-align:center;
+      
+      margin:5px;
+      width:100%;
+      margin: auto;
+      padding: 5px;
+      border-radius: 10px;
+     }
+     .signup-container{
+        background-image: url("../image/bg2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+      height: 650px;
+
+     }
+     .heading-container{
+      font-size:40px;
+      font-weight:700;
+      color:#0c5f4c;
+      text-shadow:1px 2px 10px #5ac71bf7,1px 2px 10px #2e2f0942
+     
+         
+     }
+    
