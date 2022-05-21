@@ -28,7 +28,7 @@ if(!isset($_SESSION['user'])){
                 <a  class="nav-link dropdown-toggle dropdown_btn" data-toggle="dropdown" id="login_btn" href="#">
                  <i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
                  <div class="login-panel">
-                     <!-- <?php include "includes/login.php" ?> -->
+                    
                  
                  </div>
             </li>
