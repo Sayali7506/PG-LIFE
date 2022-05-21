@@ -103,8 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="row">
                 <div class="col-md-6">
                     <div class="heading-container d-flex justify-content-center mt-5">
-                        Enjoy Your Holidays  with luxiries  Life <br/>
-                        Hurry Up ,Book Now<br/>
+                       
                     </div>
                     
 

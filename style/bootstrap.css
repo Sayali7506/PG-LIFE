@@ -59,6 +59,8 @@
   --bs-body-bg: #fff;
 }
 
+html {}
+
 *,
 *::before,
 *::after {

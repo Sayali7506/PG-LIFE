@@ -30,7 +30,7 @@ width: 100%;
 .form-group input{
     width: 400px;
 }
-.dropdown-menu{
+.dropdown-menu,.login-panel{
 
     display: none;
 }

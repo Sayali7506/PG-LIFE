@@ -25,9 +25,10 @@ if(!isset($_SESSION['user'])){
              <!-- login model -->
              <li class="nav-item">
                  
-                <a  class="nav-link dropdown-toggle dropdown_btn" data-toggle="dropdown" id="dropdown_btn" href="#">
+                <a  class="nav-link dropdown-toggle dropdown_btn" data-toggle="dropdown" id="login_btn" href="#">
                  <i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
-                 <div class="dropdown-menu">
+                 <div class="login-panel">
+                     <!-- <?php include "includes/login.php" ?> -->
                  
                  </div>
             </li>
