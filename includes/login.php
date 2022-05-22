@@ -1,6 +1,6 @@
 <?php
- session_start();
-require "../database_connect.php";
+
+require "./database_connect.php";
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
 
@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         $email=text_input($_POST['email']);
         $password=text_input($_POST['password']);
             
-        $sql="SELECT name FROM users WHERE email='$email' AND password='$password' ";
+        $sql="SELECT full_name FROM users WHERE email='$email' AND password='$password' ";
       $result=mysqli_query($conn,$sql);
         if(!$result)
         {
@@ -27,10 +27,11 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
         if($count > 0)
         {
                     $row=mysqli_fetch_assoc($result);
-                     $name=$row["name"];
+                     $name=$row["full_name"];
                  $_SESSION["user"]=$name;
        
                 header("location:../index.php");
+                die();
         }
         else{
 
@@ -41,24 +42,42 @@ mysqli_close($conn);
 }
 
 ?>
+<div class="container-fluid">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="image/logo.png" alt="logo">
+
+    </div>
+    <div class="nav navbar-nav">
+      <div class="nav-item mx-5">
+       <a class="nav-link" href="includes/signup.php">Sign In<i class="fa fa-long-arrow-right fa-1x signup-arrow"  aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+  </nav>
+
+
+
+
 
 
     <div class="login-container">
         
                 
                 <!-- login panel -->
-                <div class="col-md-5 mt-5">
+                <div class="mt-5">
                 <div class="panel p-3 mt-5">
                    <div class="panel-heading">
-                        
-                            Login with PG-LIFE
-                    </div>
+                     Log in with PG-LIFE
+                   
+                    
+                  </div>
                    <div class="panel-body my-5 mx-2">
+                   <div class="alert alert-danger" role="alert" id="login_show">
+                     </div>
+                  <?php if (isset($errormsg)) { echo "<p class='message'>" .$errormsg. "</p>" ;} ?>
                      <form action="<?php echo $_SERVER['PHP_SELF'] ?> " role="form" method="POST" id="form_login" name="form_login">
-                     <div class="alert alert-danger" role="alert" id="login_show">
-                          
-                      </div>
-                      <?php if (isset($errormsg)) { echo "<p class='message'>" .$errormsg. "</p>" ;} ?>
+                    
 
                        <!-- email -->
                        <div class="form-group d-flex justify-content-center mt-3">
@@ -83,21 +102,19 @@ mysqli_close($conn);
                               </div>
                     </form>             
                    </div>
-                   <div class="panel-footer">
-                   <span>
-                    <a href="index.php">Click here</a>
-                    to register a new account
-                </span>
-                   </div>
+                   
                </div>
 
 
            </div>
        </div>
 
-                </div>
+      </div>
           
     </div>
+
+</div>
+    <script src="js/login_check.js" type="text/javascript"></script>
 
 
   

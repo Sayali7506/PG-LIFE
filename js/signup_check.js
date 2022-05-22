@@ -2,6 +2,32 @@
  window.addEventListener("load",function(){
    
     var btn = document.getElementById('btn_signup');
+    var text="Welcome To PG-LIFE";
+    var count=0;
+     typewriter();
+     
+     
+      setTimeout(typewriter,5000);
+  
+   
+    
+    
+    function typewriter(){
+     
+      document.getElementById('welcome-heading').innerHTML+=text.charAt(count);
+      count++;
+      if(count<text.length){
+         setTimeout(typewriter,200);
+      }else{
+         document.getElementById("welcome-heading").style.textShadow = "5px 5px 10px #a7146ff7,5px 2px 10px #4838e7";
+      }
+     
+      
+ 
+ 
+   }
+   
+   
    
  
  
@@ -19,16 +45,21 @@
          if(document.getElementById("male").checked){
             gender_value="male";
             myscript();
+            document.getElementById("female").disabled=true;
 
          }
         else if(document.getElementById("female").checked){
+         document.getElementById("male").disabled=true;
 
          gender_value="female";
          myscript();
         }
         else{
 
-         gender_value=null;
+        
+         errorMsg.style.display="block";
+          errorMsg.innerHTML="Please Enter gender";
+          btn.disabled=true;
 
         }
 
@@ -80,59 +111,15 @@
           btn.disabled=true;
           document.getElementById("signup-college").addEventListener("keypress",myscript);
 
-   }else if(!gender){
+   }
 
-      errorMsg.style.display="block";
-          errorMsg.innerHTML="Please Enter gender";
-          btn.disabled=true;
-          getGender();
+      
+        
          
         
 
 
-   }//else{
-      
-       
+   
+  });
+  });
  
-    
-     
-     
-   //   var  xhttp=new XMLHttpRequest();
-        
-   //      xhttp.onreadystatechange= function()
-   //      {
-          
-   //          if(xhttp.readyState===xhttp.DONE)
-   //          {
-   //              if(xhttp.status===200)
-   //              {
-                    
-                     
-   //                   var response = JSON.parse(xhttp.responseText);
-   //                   if (response.success) {
-   //                    errorMsg.innerHTML=response.message;
-                      
-   //                   } else 
-   //                   {
-   //                    errorMsg.innerHTML=response.message;
-   //                   }
-   //                }
- 
-   //          }
-        
-   //       }
-   //      xhttp.open("POST","api/login_submit.php");
-   //      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-   //      xhttp.send("x="+obj);
-   //     }
- 
-    });
-  
- 
- 
- 
- 
- 
- 
- 
- });

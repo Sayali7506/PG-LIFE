@@ -9,7 +9,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : NULL;
 
 if($user){
     $user_name = $_SESSION['user'];
-    $sql="SELECT id FROM users WHERE name='$user_name'";
+    $sql="SELECT id FROM users WHERE full_name='$user_name'";
     $result=mysqli_query($conn,$sql);
     if(!$result){
         $response=array("success"=>false,"message"=>"somenthing went wrong");
@@ -18,7 +18,7 @@ if($user){
      if($count>0){
          $row= mysqli_fetch_assoc($result);
          $user_id=$row['id'];
-        $sql3="SELECT property_id FROM  intersted_users_properties WHERE  user_id='$user_id' ";
+        $sql3="SELECT property_id FROM  interested_users_properties WHERE  user_id='$user_id' ";
         $result3=mysqli_query($conn,$sql3);
         if(!$result3){
             $response=array("success"=>false,"message"=>"somenthing went wrong");
@@ -157,7 +157,7 @@ $cityName = isset($_GET['serach']) ? $_GET['serach'] : NULL;
                             <!-- rating  container -->
                 <div class="rating-container">
                     <?php
-                     $total_rating= ($property['rating_clean']+$property['rating_food']+$property['rating_safty'])/3;
+                     $total_rating= ($property['rating_clean']+$property['rating_food']+$property['rating_safety'])/3;
                      $total_rating=$total_rating = round($total_rating, 1);
                       for($i=0;$i<5;$i++){
                         $rating=$total_rating;

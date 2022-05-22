@@ -32,7 +32,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $password=pattern($_POST['password']);
      $college=test_input($_POST['college']);
-    $gender=test_input($_POST['gender']);
+     
+     if($_POST['gender']=='male'){
+        $gender=test_input('male');
+
+     }else{
+        $gender=test_input('female');
+
+     }
+   
     
   
   
@@ -59,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }else
     {
   // insert data into table
-         $sql2="INSERT INTO users(name,email,phone,password,gender,college)VALUES('$name','$email','$phone','$password','$gender','$college')";
+         $sql2="INSERT INTO users(full_name,email,phone,password,gender,college_name)VALUES('$name','$email','$phone','$password','$gender','$college')";
         $result2=mysqli_query($conn,$sql2);
          if(!$result2)
          {
@@ -102,7 +110,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container-fuild">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="heading-container d-flex justify-content-center mt-5">
+                    <a href="../index.php" class="m-5 login-link"><i class="fa fa-long-arrow-left m-2" aria-hidden="true"></i>Go Back</a>
+                    <div class="heading-container m-5 " id="welcome-heading">
+
                        
                     </div>
                     
@@ -116,12 +126,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             Signup with PG-LIFE
                     </div>
                    <div class="panel-body my-2 mx-2">
+                            <div class="alert alert-info" role="alert" id="signup_show">
+                          
+                          </div>
+                          <?php if (isset($errormsg1)) { echo "<p class='message'>" .$errormsg1. "</p>" ;} ?>
                     
                         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" role="form" method="POST" id="form_signup">
                                
-                                 <div class="alert alert-info" role="alert" id="signup_show">
-                          
-                                </div>
+                                 
+
                             <!-- full name -->
                                 <div class="form-group d-flex justify-content-center mt-3">
                                 
@@ -169,12 +182,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                    </div>
                 </form>
                    </div>
-                   <div class="panel-footer">
-                   <span>
-                    <a href="">Click here</a>
-                     Already have an account?
-                </span>
-                   </div>
+                   
                </div>
 
 

@@ -120,7 +120,7 @@ $sql2="SELECT * FROM testimonials WHERE property_id=$property_id";
  <!-- rating container -->
                             <div class="rating-container">
                                 <?php
-                                     $total_rating= ($property['rating_clean']+$property['rating_food']+$property['rating_safty'])/3;
+                                     $total_rating= ($property['rating_clean']+$property['rating_food']+$property['rating_safety'])/3;
                                       $total_rating=$total_rating = round($total_rating, 1);
                                       for($i=0;$i<5;$i++)
                                         {
